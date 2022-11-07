@@ -12,6 +12,8 @@
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
+        - Navigation
+        - Hero
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment	
 --------------------------------------------------------------*/
@@ -32,7 +34,8 @@
 }
 
 html {
-        /* ----- set font-size ----- */
+       color: #717982;
+       font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -50,19 +53,58 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+/* ----- TYPOGRAPHY ----- */ 
+h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin: 3em 0 0; 
+}
+
+h1 + p span {
+        color: #1EA78D;
+}
+
+h1 + p {
+        font-size: 2rem;
+        line-height: 0.75em;
+        font-weight: 300;
+        margin-top: 0.25em;
+        margin-bottom: 0;
+}
+
+#home div:last-child p:last-child {
+        margin-top: 1.5em;
+}
 
 
+h2 {
+        display: inline-block;
+        border-bottom: 2px #1EA78D solid;
+        padding: 5px 10px;
+        color: #1EA78D;
+        text-transform: uppercase;
+        margin-bottom: 0;
+}
+
+h3 { 
+        color: #000;
+}
+
+p {
+        line-height: 1.75em;
+}
 
 @media screen and (min-width: 768px) {
-        html {
-
-        }
+       
 }
 
 @media screen and (min-width: 1024px) {
-        html {
-
+        h1 {
+                font-size: 3rem;
         }
+
+
+
 }
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -253,6 +295,95 @@ html {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+a,
+footer,
+#home div:last-child {
+        color: #fff;
+        text-decoration: none;
+}
+
+#home,
+#work,
+#features > div > header {
+        text-align: center;
+}
+
+
+#features {
+        background-color: #F4F7F9;        
+}
+
+#features,
+#work {
+        padding: 3em 0;
+}
+
+#contact {
+        background-color: #1EA78D;
+        border-top: solid #10443F 5px;
+        padding: 3em 0;
+}
+
+/* ----- NAVIGATION ----- */ 
+#home .row div {
+        text-align: left;
+}
+
+nav {
+        text-align: right;
+}
+
+nav li {
+        list-style-type: none;
+        display: inline-block;
+}
+
+header a {
+        margin-left: 1.5em;
+}
+
+
+/* ----- HERO ----- */ 
+#home > div:first-child {
+        background-color: #10443F;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+}
+
+
+#home {
+        background-color: #104F41;
+        padding: 4.5em 0;
+}
+
+#home p:last-child {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+}
+
+#home p:last-child:before,
+#home p:last-child:after {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background-color: #1EA78D;
+        display: block;
+        position: absolute;
+        top: 10px;
+}
+
+#home p:last-child:before {
+        left: -26px;
+}
+
+#home p:last-child:after {
+        right: -26px;
+}
 
 
 
