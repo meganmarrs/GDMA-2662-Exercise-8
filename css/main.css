@@ -186,13 +186,19 @@ footer,
 
 #home,
 #work,
-#features > div > header {
+#features > div > header,
+header nav {
         text-align: center;
 }
 
 #features,
 #work {
         padding: 3em 0;
+}
+
+#home p:last-child,
+nav li {
+        display: inline-block;
 }
 
 #work {
@@ -340,29 +346,22 @@ footer,
 
 /* ----- NAVIGATION ----- */ 
 
-#home .row {
-        justify-content: center;
-}
-
-header nav {
-        text-align: center;
-}
-
 nav ul {
         padding: 0;
 }
 
 nav li {
         list-style-type: none;
-        display: inline-block;
 } 
 
 header a {
         margin-left: 1.5em;
 }
 
-header a:hover {
-        text-decoration: underline;
+li a:hover,
+address p a:hover {
+        border-bottom: 1px #fff solid;
+        padding-bottom: .25em;
 }
 
 
@@ -402,13 +401,10 @@ header a:hover {
 }
 
 #home p:last-child {
-        display: inline-block;
         position: relative;
         top: 0;
         left: 0;
 }
-
-
 
 
 
